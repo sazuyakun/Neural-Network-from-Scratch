@@ -1,4 +1,5 @@
 import numpy as np
+from activations import *
 
 class Layer:
     def __init__(self, input_size, output_size, activation=None):
@@ -58,3 +59,8 @@ class Layer:
         self.bias = self.bias - (learning_rate * db)
         
         return dX
+
+# layer = Layer(2, 3, 'relu')
+# X = np.array([[1, 2], [3, 4]])
+# output = layer.forward(X)
+# print(output)
