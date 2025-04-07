@@ -40,10 +40,6 @@ class NeuralNetwork:
         from tqdm import tqdm
         
         for epoch in tqdm(range(epochs)):
-            if verbose and epoch % 100 == 0:
-                print("="*10)
-                print(f"Epoch: {epoch+1}")
-
             # Forward Propagation
             y_pred = self.forward(X)
             
@@ -57,7 +53,10 @@ class NeuralNetwork:
             # Update Weights and Biases
             # -> The updates are handled in the backward method of each layer
             
-            print(f"Loss:  {loss:.4f}")
+            if verbose and epoch % 100 == 0:
+                print("="*10)
+                print(f"Epoch: {epoch+1}")
+                print(f"Loss:  {loss:.4f}")
         return losses
     
     def predict(self, X):
