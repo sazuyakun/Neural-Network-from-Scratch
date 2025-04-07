@@ -102,10 +102,9 @@ pip install numpy pandas scikit-learn matplotlib
 - Example Iris format:
   ```
   sepal_length,sepal_width,petal_length,petal_width,species
-  5.1,3.5,1.4,0.2,0
-  4.9,3.0,1.4,0.2,0
-  7.0,3.2,4.7,1.4,1
-  ...
+  5.1,3.5,1.4,0.2,setosa
+  4.9,3.0,1.4,0.2,setosa
+  4.7,3.2,1.3,0.2,setosa
   ```
 
 ### Running the Code
