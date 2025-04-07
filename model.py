@@ -40,7 +40,7 @@ class NeuralNetwork:
         from tqdm import tqdm
         
         for epoch in tqdm(range(epochs)):
-            if verbose:
+            if verbose and epoch % 100 == 0:
                 print("="*10)
                 print(f"Epoch: {epoch+1}")
 
